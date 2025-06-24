@@ -162,17 +162,7 @@ export default function LoginPage() {
                 </p>
               </div>
 
-              <div className="mt-6 p-4 bg-slate-50 rounded-lg">
-                <h3 className="font-semibold text-sm mb-2">Demo Account:</h3>
-                <div className="text-xs text-slate-600 space-y-1">
-                  <div>
-                    Email: <code className="bg-white px-2 py-1 rounded">demo@example.com</code>
-                  </div>
-                  <div>
-                    Password: <code className="bg-white px-2 py-1 rounded">password123</code>
-                  </div>
-                </div>
-              </div>
+             
             </CardContent>
           </Card>
         </div>

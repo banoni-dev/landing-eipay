@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -5,13 +7,13 @@ import { ArrowRight, Shield, Zap, Star } from "lucide-react"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 
-export default function LandingPage() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <Navigation />
 
       {/* Hero Section */}
-      <main className="container mx-auto px-4 py-16 md:py-24">
+      <section className="py-20">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-6">
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -30,15 +32,16 @@ export default function LandingPage() {
             our comprehensive professional license.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button asChild size="lg" className="text-lg px-8 py-6">
-              <Link href="/product">
-                View Product
-                <ArrowRight className="ml-2 w-5 h-5" />
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Button size="lg" asChild>
+              <Link href="/activate">
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              Learn More
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/product">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -75,7 +78,7 @@ export default function LandingPage() {
             </CardContent>
           </Card>
         </div>
-      </main>
+      </section>
 
       <Footer />
     </div>

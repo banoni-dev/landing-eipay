@@ -58,6 +58,11 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            {!isAuthenticated && (
+              <Button asChild variant="default" size="sm">
+                <Link href="/activate">Get Started</Link>
+              </Button>
+            )}
             {isAuthenticated && (
               <Button variant="outline" size="sm" onClick={handleLogout}>
                 <LogOut className="w-4 h-4 mr-2" />
@@ -87,6 +92,11 @@ const Navigation = () => {
                     {item.label}
                   </Link>
                 ))}
+                {!isAuthenticated && (
+                  <Button asChild className="justify-start">
+                    <Link href="/activate">Get Started</Link>
+                  </Button>
+                )}
                 {isAuthenticated && (
                   <Button variant="outline" onClick={handleLogout} className="justify-start">
                     <LogOut className="w-4 h-4 mr-2" />

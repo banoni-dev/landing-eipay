@@ -275,17 +275,7 @@ export default function CheckoutPage() {
                     )}
                   </Button>
 
-                  <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                    <p className="text-sm text-blue-800 mb-2">
-                      <strong>Next Steps:</strong>
-                    </p>
-                    <p className="text-sm text-blue-700">
-                      After payment, you'll receive your license key via email.
-                      <Link href="/activate" className="underline font-medium ml-1">
-                        Activate your license here
-                      </Link>
-                    </p>
-                  </div>
+                
 
                   <p className="text-xs text-slate-500 text-center">
                     By completing this purchase, you agree to our Terms of Service and Privacy Policy.
